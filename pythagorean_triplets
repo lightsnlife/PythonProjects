@@ -1,0 +1,13 @@
+import numpy as np
+choice=1
+while choice==1:
+    sides=[]
+    sides.append(float(input("Enter first side: ")))
+    sides.append(float(input("Enter second side: ")))
+    sides.append(float(input("Enter third side: ")))
+    
+    if 2*np.square(max(sides)) == sum(np.square(sides)):
+        print("You entered pythagorean triplets")
+    else:
+        print("You did not enter pythagorean triplets")
+    choice=int(input("Do you want to continue? 0 for No, 1 for Yes: "))
