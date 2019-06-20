@@ -1,0 +1,34 @@
+import random
+import time
+answers = ["It is decidedly so",
+           "It is certain",
+           "Without a doubt",
+           "Yes - defenitely",
+           "As I see it, Yes",
+           "Better not tell you now",
+           "Cannot predict now",
+           "My reply is no",
+           "Outlook not so good"]
+choice = 1
+
+#Simple inline interactive method
+'''
+while choice == 1:
+    question = input("Ask a question: ")
+    time.sleep(0.5)
+    print("Thinking...")
+    time.sleep(2)
+    print(answers[random.randint(0, len(answers)-1)])
+    choice = input("Do you want to know more? 1 for Yes/ 0 for No)")
+'''
+#more advanced method with dialogue box
+import tkinter as tk
+from tkinter import simpledialog
+from tkinter import messagebox
+application_window = tk.Tk()
+
+while choice:
+    simpledialog.askstring("Input", "Ask a question",
+                           parent=application_window)
+    messagebox.showinfo("Your Answer",answers[random.randint(0, len(answers)-1)])
+    choice = messagebox.askyesno("Question", "Do you want to continue?")
