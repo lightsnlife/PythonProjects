@@ -1,0 +1,10 @@
+for coke_bottle in range(99,0,-1):
+    if coke_bottle >2:
+        print("%d bottles of coke on the wall, %d bottles of coke \nTake one down and pass it around, %d bottles of coke on the wall \n" % (coke_bottle, coke_bottle, coke_bottle-1))
+    elif coke_bottle ==2:
+        print("%d bottles of coke on the wall, %d bottles of coke \nTake one down and pass it around, %d bottle of coke on the wall \n" % (coke_bottle, coke_bottle, coke_bottle-1))
+    else:
+        print("%d bottle of coke on the wall, %d bottle of coke \nTake one down and pass it around, no more bottles of coke on the wall \n" % (coke_bottle, coke_bottle))
+        
+print("No more bottles of coke on the wall, no more bottles of coke")
+print("Go to the store and buy some more, %d bottles of coke on the wall" % 99)  
