@@ -1,0 +1,90 @@
+"""
+Created on Thu Jun 20 16:52:01 2019
+
+@author: shashank
+"""
+import random
+choice="y"
+
+'''
+#printing the dice one below the other
+while choice!="q":
+    dice_numbers=int(input("How many dice do you want to roll? "))
+    face = [""]*6
+    face[0] = " _______\n|       |\n|   x   |\n|       |\n'-------'\n\n"
+    face[1] = " _______\n| x     |\n|       |\n|     x |\n'-------'\n\n"
+    face[2] = " _______\n| x     |\n|   x   |\n|     x |\n'-------'\n\n"
+    face[3] = " _______\n| x   x |\n|       |\n| x   x |\n'-------'\n\n"
+    face[4] = " _______\n| x   x |\n|   x   |\n| x   x |\n'-------'\n\n"
+    face[5] = " _______\n| x x x |\n| x x x |\n| x x x |\n'-------'\n\n"
+    for i in range(dice_numbers):
+        j = random.randint(1,6)
+        print(face[j-1])
+    print("Do you want to roll more dice? q to quit")
+    choice = str(input(">")).lower()
+'''
+    
+
+#printing the dice next to each other
+line1=[""]*6
+line2=[""]*6
+line3=[""]*6
+line4=[""]*6
+line5=[""]*6
+
+line1[0]= ".-------."
+line1[1]= ".-------."
+line1[2]= ".-------."
+line1[3]= ".-------."
+line1[4]= ".-------."
+line1[5]= ".-------."
+
+line2[0]= "|       |"
+line2[1]= "| x     |"
+line2[2]= "| x     |"
+line2[3]= "| x   x |"
+line2[4]= "| x   x |"
+line2[5]= "| x x x |"
+
+line3[0]= "|   x   |"
+line3[1]= "|       |"
+line3[2]= "|   x   |"
+line3[3]= "|       |"
+line3[4]= "|   x   |"
+line3[5]= "| x x x |"
+
+line4[0]= "|       |"
+line4[1]= "|     x |"
+line4[2]= "|     x |"
+line4[3]= "| x   x |"
+line4[4]= "| x   x |"
+line4[5]= "| x x x |"
+
+line5[0]= "'-------'"
+line5[1]= "'-------'"
+line5[2]= "'-------'"
+line5[3]= "'-------'"
+line5[4]= "'-------'"
+line5[5]= "'-------'"
+
+while choice!='q':
+    dice_numbers=int(input("How many dice do you want to roll? "))
+    str1 = ""
+    str2 = ""
+    str3 = ""
+    str4 = ""
+    str5 = ""
+    for i in range(dice_numbers):
+        j = random.randint(1,6)
+        str1+=line1[j-1]+"    "
+        str2+=line2[j-1]+"    "
+        str3+=line3[j-1]+"    "
+        str4+=line4[j-1]+"    "
+        str5+=line5[j-1]+"    "
+    print(str1)
+    print(str2)
+    print(str3)
+    print(str4)
+    print(str5)
+    print("Do you want to roll more dice? q to quit")
+    choice = str(input(">")).lower()
